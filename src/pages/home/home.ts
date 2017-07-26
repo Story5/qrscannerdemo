@@ -18,7 +18,7 @@ export class HomePage {
   }
 
   qrscanner() {
-
+    
     // Optionally request the permission early
     this.qrScanner.prepare()
       .then((status: QRScannerStatus) => {
