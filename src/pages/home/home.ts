@@ -37,7 +37,13 @@ export class HomePage {
           this.qrScanner.resumePreview();
 
           // show camera preview
-          this.qrScanner.show();
+          this.qrScanner.show()
+          .then((data : QRScannerStatus)=> { 
+            alert(data.showing);
+          },err => {
+            alert(err);
+
+          });
 
           // wait for user to scan something, then the observable callback will be called
 
