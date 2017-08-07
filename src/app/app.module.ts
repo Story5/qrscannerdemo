@@ -8,12 +8,14 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { QRScanner } from '@ionic-native/qr-scanner';
 
 import { MyApp } from './app.component';
+import { QRScannerPage } from '../pages/qrscanner/qrscanner';
 import { HomePage } from '../pages/home/home';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    QRScannerPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    QRScannerPage
   ],
   providers: [
     StatusBar,
