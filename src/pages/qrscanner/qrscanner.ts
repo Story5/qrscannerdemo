@@ -14,7 +14,8 @@ export class QRScannerPage {
   constructor(public navCtrl: NavController,
               public androidPermissions: AndroidPermissions,
               public qrScanner: QRScanner) {
-
+                
+                this.qrscanner();
   }
 
   qrscanner() {
@@ -32,6 +33,7 @@ export class QRScannerPage {
             alert(text);
             this.qrScanner.hide(); // hide camera preview
             scanSub.unsubscribe(); // stop scanning
+            this.navCtrl.pop();
           });
 
           this.qrScanner.resumePreview();
